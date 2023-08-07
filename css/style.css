@@ -1,0 +1,126 @@
+body {
+    font-family: 'Lumanosimo', cursive;}
+
+.t-shadow {
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FFACAC 0px 0px 20px, #FFACAC 0px 0px 30px, #FFACAC 0px 0px 40px, #FFACAC 0px 0px 50px, #FFACAC 0px 0px 75px;
+}
+
+.b-shadow {
+    box-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FFACAC 0px 0px 20px, #FFACAC 0px 0px 30px, #FFACAC 0px 0px 40px, #FFACAC 0px 0px 50px, #FFACAC 0px 0px 75px;
+}
+
+.winner {
+    display: none;
+    z-index: 3;
+    position: absolute;
+    animation: onOff 1s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    padding-bottom: 3px;
+    border-bottom: 2px solid white;
+    position: relative;
+}
+
+h1, table, .turnDisplay, .row {
+    visibility: hidden;
+}
+
+.dispalyPage {
+    animation: onOffScale 2s;
+    visibility: visible;
+
+
+}
+
+
+
+h1::before {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: -7px;
+    right: 50%;
+    transform: translate(50%);
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 20%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: -12px;
+    right: 50%;
+    transform: translate(50%);
+}
+
+
+
+.h-60 {
+    height: 60%;
+}
+
+.parent {
+    height: 33%;
+}
+
+
+.cell {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 6px 8px 11px -1px rgba(0, 0, 0, 0.23);
+    cursor: pointer;
+}
+
+
+.cell:hover {
+
+    transform: scale(1.02);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.cellWinner {
+    background-color: rgba(0, 0, 0, 0.15);
+    transform: scale(1.08);
+
+}
+
+
+.onOff {
+    animation: onOffScale 0.25s, onOffOpacity 0.25s 0.25s 2;
+}
+
+@keyframes onOffScale {
+    0% {
+        transform: scale(0.5);
+        color: white;
+    }
+
+    100% {
+        transform: scale(1);
+        color: black;
+
+    }
+
+}
+
+@keyframes onOffOpacity {
+    0% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+
+}
